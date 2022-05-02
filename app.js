@@ -44,14 +44,14 @@ class UI{
      result += `
      <article class="product">
                <div class="img-container">
-                   <img src=${product.image} alt="product" class="product-img">
-                   <button class="bag-btn" data-id=${product.id}>
+                   <img src=₹{product.image} alt="product" class="product-img">
+                   <button class="bag-btn" data-id=₹{product.id}>
                        <i class="fas fa-shopping-cart"></i>
                        add to cart
                    </button>
                </div> 
-               <h3>${product.title}</h3>
-               <h4>$${product.price}</h4>
+               <h3>₹{product.title}</h3>
+               <h4>₹{product.price}</h4>
       </article>  
      ` ; 
    }); 
@@ -103,9 +103,9 @@ class UI{
   addCardItem(item){
     const div = document.createElement('div');
     div.classList.add('cart-item');
-      div.innerHTML =` <img src=${item.image} alt="product"> 
+      div.innerHTML =` <img src={item.image} alt="product"> 
                       <div>
-                          <h4>${item.title}</h4>
+                          <h4>₹{item.title}</h4>
                           <h5>$${item.price}</h5>
                           <span class="remove-item" data-id=${item.id}>remove</span>
                       </div>
